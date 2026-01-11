@@ -13,34 +13,34 @@ Original library can be found here https://github.com/stm32duino/Arduino_Core_ST
 
 # **Library functions**
 
-#### **`FlashEEPROM.read( address )`** [[_example_]](examples/Flasheeprom_read/Flasheeprom_read.ino)
+#### **`FlashEEPROM.read( address )`**
 
 This function allows you to read a single byte of data from the Flasheeprom.
 Its only parameter is an `int` which should be set to the address you wish to read.
 
 The function returns an `unsigned char` containing the value read.
 
-#### **`FlashEEPROM.write( address, value )`** [[_example_]](examples/Flasheeprom_write/Flasheeprom_write.ino)
+#### **`FlashEEPROM.write( address, value )`**
 
 The `write()` method allows you to write a single byte of data to the FlashEEPROM.
 Two parameters are needed. The first is an `int` containing the address that is to be written, and the second is a the data to be written (`unsigned char`).
 
 This function does not return any value.
 
-#### **`FlashEEPROM.update( address, value )`** [[_example_]](examples/Flasheeprom_update/Flasheeprom_update.ino)
+#### **`FlashEEPROM.update( address, value )`**
 
 This function is similar to `FlashEEPROM.write()` however this method will only write data if the cell contents pointed to by `address` is different to `value`. This method can help prevent unnecessary wear on the FlashEEPROM cells.
 
 This function does not return any value.
 
-#### **`FlashEEPROM.get( address, object )`** [[_example_]](examples/Flasheeprom_get/Flasheeprom_get.ino)
+#### **`FlashEEPROM.get( address, object )`**
 
 This function will retrieve any object from the FlashEEPROM.
 Two parameters are needed to call this function. The first is an `int` containing the address that is to be written, and the second is the object you would like to read.
 
 This function returns a reference to the `object` passed in. It does not need to be used and is only returned for conveience.
 
-#### **`FlashEEPROM.put( address, object )`** [[_example_]](examples/Flasheeprom_put/Flasheeprom_put.ino)
+#### **`FlashEEPROM.put( address, object )`**
 
 This function will write any object to the FlashEEPROM.
 Two parameters are needed to call this function. The first is an `int` containing the address that is to be written, and the second is the object you would like to write.
@@ -49,7 +49,7 @@ This function uses the _update_ method to write its data, and therefore only rew
 
 This function returns a reference to the `object` passed in. It does not need to be used and is only returned for conveience.
 
-#### **Subscript operator: `FlashEEPROM[address]`** [[_example_]](examples/Flasheeprom_crc/Flasheeprom_crc.ino)
+#### **Subscript operator: `FlashEEPROM[address]`**
 
 This operator allows using the identifier `FlashEEPROM` like an array.  
 FlashEEPROM cells can be read _and_ **_written_** directly using this method.
